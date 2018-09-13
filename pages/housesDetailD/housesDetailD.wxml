@@ -1,0 +1,43 @@
+<i-panel title="基本信息">
+  <i-input value="{{ detail.hou_names}}" disabled title="项目名称" />
+  <i-input value="{{ detail.hou_pirce}}元/m²" disabled title="均价" />
+  <i-input value="{{ detail.hou_equity }}年" disabled title="产权" />
+  <i-input value="{{ detail.hou_greerate }}%" disabled title="绿化率" />
+  <i-input value="{{ detail.hou_plotrate }}" disabled title="容积率" />
+  <i-input value="{{detail.hou_br==0?'毛坯':''||detail.hou_br==1?'简装':''||detail.hou_br==2?'中等装':''||detail.hou_br==3?'精装':''||detail.hou_br==4?'豪华装':''}}" disabled title="装修标准" />
+  <i-input value="{{ detail.hou_spot}}个" disabled title="规划车位" />
+  <i-input value="{{ detail.hou_number }}户" disabled title="规划户数" />
+  <i-input value="{{ detail.hou_gas }}" disabled title="是否通燃气" />
+</i-panel>
+
+<i-panel title="楼盘信息">
+  <i-input value="{{ detail.hou_steel }}" disabled title="开发商" />
+  <i-input value="{{ detail.hou_address}}" type='textarea' disabled title="楼盘地址" />
+  <i-input value="{{ detail.hou_opentime}}" disabled title="开盘时间" />
+  <i-input value="{{ detail.hou_datetime}}" disabled title="交房时间" />
+  <i-input value="{{ detail.hou_status==0?'在售':''||detail.hou_status==1?'待售':''||detail.hou_status==2?'售罄':''}}" disabled title="销售状态" />
+  <i-input value="{{ detail.hou_area}}m²" disabled title="占地面积" />
+  <i-input value="{{ detail.hou_type }}" disabled title="楼盘类型" />
+  <i-input value="{{ detail.hou_card==null?'暂无':detail.hou_card }}" disabled title="预售证" />
+</i-panel>
+
+
+<i-panel title="物业信息">
+  <i-input value="{{ detail.hou_perty }}" disabled title="物业公司" />
+  <i-input value="{{ detail.hou_pertype }}" disabled title="物业类型" />
+  <i-input value="{{ detail.hou_pertyfee }}元/m²/月" disabled title="物业费" />
+  <i-input value="{{ detail.hou_tel }}" disabled title="供水方式" />
+  <i-input value="{{ detail.hou_water }}" disabled title="供电方式" />
+</i-panel>
+<i-panel title=" ">
+  <i-input value="{{ detail.hou_point }}" type="textarea" disabled title="项目卖点" style='height:100rpx;' />
+  <i-input value="{{ detail.hou_content }}" type="textarea" disabled title="项目介绍" style='height:100rpx;' />
+</i-panel>
+
+<!-- <i-panel title="物业信息">
+  <i-input value="{{ value1 }}" disabled title="物业公司" />
+  <i-input value="{{ value2 }}" disabled title="物业公司" />
+  <i-input value="{{ value3 }}" disabled title="物业费" />
+  <i-input value="{{ value4 }}" disabled title="供水方式" />
+  <i-input value="{{ value4 }}" disabled title="供电方式" />
+</i-panel> -->

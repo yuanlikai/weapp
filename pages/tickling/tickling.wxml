@@ -1,0 +1,16 @@
+<!--pages/tickling/tickling.wxml-->
+<!-- <view class='big'>
+  <textarea class='big-inp' value="{{value}}" bindconfirm="huoqu" placeholder="请填写您的反馈意见" focus="{{true}}" />
+</view>
+<view style='float:left;width:100%;height:20rpx'>
+</view>
+<i-button bind:click="handleClick" type="info">提交反馈</i-button> -->
+
+
+  <form bindsubmit="bindFormSubmit" class='big'>
+    <textarea placeholder="请填写您的反馈意见" name="textarea" class='big-inp'/>
+    
+<view style='float:left;width:100%;height:20rpx'>
+</view>
+    <button form-type="submit"> 提交 </button>
+  </form>

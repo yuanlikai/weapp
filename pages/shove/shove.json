@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-icon": "../../dist/icon/index",
+    "i-button": "../../dist/button/index",
+    "i-divider": "../../dist/divider/index",
+    "i-load-more": "../../dist/load-more/index",
+    "i-count-down": "../../dist/count-down/index",
+    "i-modal": "../../dist/modal/index"
+  }
+}

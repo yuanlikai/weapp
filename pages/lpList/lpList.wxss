@@ -1,0 +1,169 @@
+/* pages/shove/shove.wxss */
+
+.activity-ul-xinf {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 23rpx;
+}
+
+.activity-li-xinf {
+  float: left;
+  width: 100%;
+  padding: 40rpx 0;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+
+.activity-ul-xinf-img {
+  float: left;
+  height: 150rpx;
+  width: 200rpx;
+  margin-right: 14rpx;
+}
+
+.activity-ul-xinf-name {
+  float: left;
+  color: #222;
+  font-size: 30rpx；;
+}
+
+.activity-ul-xinf-detail {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+  margin: 15rpx 0;
+}
+
+.activity-ul-xinf-detail text {
+  float: left;
+}
+
+.activity-li-childa {
+  border-bottom: 1px solid #666;
+  height: 17rpx;
+  margin-top: -4rpx;
+}
+
+.xinf-detail-line {
+  width: 1rpx;
+  height: 24rpx;
+  margin: 0 18rpx;
+  margin-top: 6rpx;
+  background: #666;
+}
+
+.activity-li-xinf .i-btn-primary {
+  color: red;
+}
+
+.activity-li-child {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.child-paia {
+  color: #c63030;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.tab-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.con-search {
+  float: left;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  top: 24rpx;
+  left: 43rpx;
+  width: 100%;
+  height: 72rpx;
+  border-radius: 12rpx;
+  background: #fff;
+}
+
+.search-Lp {
+  float: left;
+  width: 250rpx;
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 14rpx;
+  line-height: 72rpx;
+}
+
+.search-lef {
+  float: left;
+  height: 72rpx;
+}
+
+.search-rig-img {
+  float: left;
+  width: 33rpx;
+  height: 33rpx;
+  margin: 21rpx 0 0 40rpx;
+}
+
+.con-search-rig {
+  box-sizing: border-box;
+  height: 64rpx;
+  float: left;
+  width: 290rpx;
+  font-size: 24rpx;
+  padding-left: 22rpx;
+}
+
+.search-bg {
+  float: left;
+  height: 72rpx;
+  width: 100%;
+  background: rgba(247, 247, 247, 1);
+  border-radius: 10rpx;
+}
+
+.search-inp {
+  float: left;
+  height: 72rpx;
+  width: 500rpx;
+  line-height: 72rpx;
+  color: #999;
+  padding: 0 0 0 14rpx;
+  font-size: 28rpx;
+}
+
+.filtrate {
+  float: left;
+  width: 100%;
+  height: 72rpx;
+}
+
+.filtrate-li {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+  height: 72rpx;
+  line-height: 102rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+
+.activity-ul-xinf-state {
+  position:relative;
+  padding: 0 4rpx;
+  border-radius: 4rpx;
+  background: #c63031;
+  color: #fff;
+  font-size: 20rpx;
+  margin-top: -8rpx;
+}
+
+.daodia{
+  margin-top: 26rpx;
+}

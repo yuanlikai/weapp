@@ -1,0 +1,23 @@
+<!--pages/newsDetail/newsDetail.wxml-->
+<view class='detail-head'>
+  {{detail.news_headline}}
+</view>
+
+<view class='detail-head-deral'>
+  <text class='detail-head-name'>{{detail.admin_name}}</text>
+  <text class='detail-head-rime'>{{time}}</text>
+</view>
+
+<view class='content'>
+  <view class='content1'>
+    {{content.news_content1}}
+  </view>
+  <image src='http://img.gsfzd.com/{{content.news_content2}}' class='content2'></image>
+  <view class='content1'>
+    {{content.news_content3}}
+  </view>
+  <image src='http://img.gsfzd.com/{{content.news_content4}}' class='content2'></image>
+  <view class='content1'>
+    {{content.news_content5}}
+  </view>
+</view>

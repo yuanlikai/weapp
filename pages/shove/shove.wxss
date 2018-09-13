@@ -1,0 +1,75 @@
+/* pages/shove/shove.wxss */
+
+.activity-ul-xinf {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 23rpx;
+}
+
+.activity-li-xinf {
+  float: left;
+  width: 100%;
+  padding: 40rpx 0;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+
+.activity-ul-xinf-img {
+  float: left;
+  height: 150rpx;
+  width: 200rpx;
+  margin-right: 14rpx;
+}
+
+.activity-ul-xinf-name {
+  float: left;
+  color: #222;
+  font-size: 30rpx；;
+}
+
+.activity-ul-xinf-detail {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+  margin: 15rpx 0;
+}
+
+.activity-ul-xinf-detail text {
+  float: left;
+}
+
+.activity-li-childa {
+  border-bottom: 1px solid #666;
+  height: 17rpx;
+  margin-top: -4rpx;
+}
+.xinf-detail-line {
+  width: 1rpx;
+  height: 24rpx;
+  margin: 0 18rpx;
+  margin-top: 6rpx;
+  background: #666;
+}
+
+.activity-li-xinf .i-btn-primary {
+  color: red;
+}
+.activity-li-child {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+}
+.child-paia {
+  color: #c63030;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.tab-fixed{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.daodia{
+  padding-top: 30rpx;
+}

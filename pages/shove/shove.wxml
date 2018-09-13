@@ -1,0 +1,37 @@
+<view class='tab-fixed'>
+  <i-tabs current="{{ current }}" color="#C63030" bindchange="handleChange">
+    <i-tab key="xin" title="新房直卖"></i-tab>
+    <i-tab key="you" title="优质房源"></i-tab>
+    <i-tab key="zhong" title="中介精推"></i-tab>
+    <i-tab key="ge" title="个人房源"></i-tab>
+  </i-tabs>
+</view>
+<view style='float:left;width:100%;height:42px'>
+
+</view>
+<view class='activity-ul-xinf'>
+
+  <navigator wx:for="{{recommendList}}" wx:key="{{index}}" url="{{item.type=='ge'?'/pages/housesType/housesType':'/pages/housesDetail/housesDetail'}}?hou_id={{item.id}}&type={{item.type}}" hover-class="navigator-hover">
+    <view class='activity-li-xinf'>
+      <image class='activity-ul-xinf-img' src="{{item.pic[0].url}}?x-oss-process=image/resize,h_150"></image>
+      <view class='activity-ul-xinf-name'>{{item.names}}
+        <text class='activity-ul-xinf-state' style="background:{{item.status===0?'#c63031':(item.status===1?'#009C36':'#999')}}">{{item.status===0?'在售':(item.status===1?'待售':'售罄')}}</text>
+      </view>
+      <view class='activity-ul-xinf-detail'>
+        {{item.point}}
+        <!-- <text>高层</text>
+          <text class='xinf-detail-line'></text>
+          <text>嘉定南翔</text>
+          <text class='xinf-detail-line'></text>
+          <text>142-323m平方</text> -->
+      </view>
+      <view class='activity-li-child'>均价：
+        <text class='child-paia'>{{item.pirce}}<text style='font-size:24rpx;font-weight: 400'>元/m²</text></text>
+      </view>
+    </view>
+  </navigator>
+  <view class="daodia">
+    <i-load-more wx:if="{{loadingSta}}" tip="数据加载中..." loading="{{ true }}" />
+    <i-load-more wx:if="{{!loadingSta}}" tip="数据加载完成" loading="{{ false }}" />
+  </view>
+</view>

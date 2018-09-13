@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/site/site",
+    "pages/search/search",
+    "pages/shove/shove",
+    "pages/lpList/lpList",
+    "pages/housesDetail/housesDetail",
+    "pages/housesDetailD/housesDetailD",
+    "pages/housesType/housesType",
+    "pages/news/news",
+    "pages/newsDetail/newsDetail",
+    "pages/tickling/tickling"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "贵上房",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true,
+    "onReachBottomDistance": 200
+  },
+  "tabBar": {
+    "borderStyle":"black",
+    "selectedColor": "#ffd333",
+    "color": "#888888",
+    "list": [
+      {
+        "iconPath":"image/1.png",
+        "selectedIconPath":"image/1-1.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "image/2.png",
+        "selectedIconPath": "image/2-1.png",
+        "pagePath": "pages/shove/shove",
+        "text": "推荐"
+      },
+      {
+        "iconPath": "image/5.png",
+        "selectedIconPath": "image/5-1.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  }
+}

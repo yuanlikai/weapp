@@ -1,0 +1,92 @@
+<view class='swiper-big'>
+  <image bindtap='viewImg' src="{{housesTypeList.hou_ses_pic}}" class="swiper-img" />
+</view>
+<view class='basicDetail'>
+  <view class='basicDetail-content'>
+    <view wx:if="{{state===0}}" class='basicDetail-content-title'>{{housesTypeList.hou_ses_name}}：{{housesTypeList.hou_size_info}}</view>
+    <view wx:else class='basicDetail-content-title'>{{housesTypeList.hou_ses_name}}：
+    {{housesTypeList.hou_ses_room}}室{{housesTypeList.hou_ses_type}}厅{{housesTypeList.hou_ses_type}}卫</view>
+
+
+
+    <view wx:if="{{state===1}}" class='basicDetail-content-det'>小区名称：
+      <text style='color:#444'>{{housesTypeList.hou_size_info}}</text>
+    </view>
+    
+    <view wx:if="{{state===1}}" class='basicDetail-content-det'>房型总价：
+      <text style='color:#C63030;font-weight: 500'>{{housesTypeList.hou_ses_price}}万</text>
+    </view>
+    <view wx:else class='basicDetail-content-det'>房型均价：
+      <text style='color:#C63030;font-weight: 500'>{{housesTypeList.hou_ses_price}}元/m²</text>
+    </view>
+
+    <view class='basicDetail-content-det'>房型朝向：
+      <text style='color:#444'>{{housesTypeList.hou_ses_look}}</text>
+    </view>
+    <view class='basicDetail-content-det'>面积：
+      <text style='color:#444'>{{housesTypeList.hou_ses_area}}m²</text>
+    </view>
+    <view wx:if="{{state===1}}" class='basicDetail-content-det'>年代：
+      <text style='color:#444'>{{housesTypeList.hou_ses_year}}年</text>
+    </view>
+    <view wx:if="{{state===1}}" class='basicDetail-content-det'>产权：
+      <text style='color:#444'>{{housesTypeList.hou_ses_right}}年</text>
+    </view>
+    <view wx:if="{{state===1}}" class='basicDetail-content-det'>楼层：
+      <text style='color:#444'>{{housesTypeList.hou_ses_floor}} / {{housesTypeList.hou_ses_floors}}</text>
+    </view>
+    <view wx:if="{{state===1}}" class='basicDetail-content-det'>地址：
+      <text style='color:#444'>{{housesTypeList.hou_ses_address}}</text>
+    </view>
+
+
+
+
+    <view class='basicDetail-content-det'>
+      <text style='float:left'>户型介绍：</text>
+      <view class='zdbc'>{{housesTypeList.hou_ses_content}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='phone' bindtap="phone">
+  <view class='phone-child'>咨询热线：{{housesTypeList.hou_ses_tel}}</view>
+  <view class='phone-childa'>
+    <i-icon type="mobilephone_fill" size="18" color="#62AB00" />立即拨打</view>
+</view>
+
+<view wx:if="{{state===0}}">
+<view class='activity'>
+  <view class='activity-title'>其他户型</view>
+  <view class='activity-ul-xinf'>
+    <navigator wx:for="{{houTypeList}}" wx:key="{{index}}" url="/pages/housesType/housesType?hou_ses_id={{item.hou_ses_id}}" open-type="redirect" hover-class="other-navigator-hover">
+      <view class='activity-li-xinf'>
+        <image class='activity-ul-xinf-img' src="http://img.gsfzd.com/{{item.hou_ses_pic}}"></image>
+        <view class='activity-ul-xinf-name'>{{item.hou_ses_name}}：{{item.hou_size_info}}
+        </view>
+        <view class='activity-ul-xinf-detail'>
+          面积：{{item.hou_ses_area}}m²
+        </view>
+        <view class='activity-li-child'>均价：
+          <text class='child-paia'><text style='font-size:24rpx;font-weight: 400'>{{item.hou_ses_price+'元/m²'}}</text></text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+
+<!-- <view style='float:left;width:100%;height:100rpx;'></view>
+<view class='footer'>
+  <view class='footer-Yy' bindtap='maifang'>立即订购</view>
+  <button class='footer-Yy' style='margin-right:54rpx;background:rgba(98,171,0,1)' open-type="contact">
+    在线咨询
+  </button>
+  <button class='fot-fx' open-type="share">
+    <view class='footer-fx'>
+      <i-icon type="send" size="23" />分享
+    </view>
+  </button>
+</view> -->
+</view>

@@ -1,0 +1,33 @@
+<view class='con-search'>
+  <view class='search-bg'>
+    <image class='search-rig-img' src='https://wx-gsf.oss-cn-hangzhou.aliyuncs.com/home/search_searth.png'></image>
+    <input focus="{{true}}" class='search-inp' value='{{value}}' bindconfirm="search" placeholder='搜索楼盘名称'></input>
+  </view>
+  <navigator open-type="navigateBack" hover-class="other-navigator-hover">
+    <text class='search-off'>取消</text>
+  </navigator>
+</view>
+<!-- <view class='hot-search'>
+  <text class='hot-search-titel'>热门搜索</text>
+  <image class='hot-search-img' src='https://wx-gsf.oss-cn-hangzhou.aliyuncs.com/home/%E6%8D%A2%E4%B8%80%E6%89%B9-01%402x.png'></image>
+</view>
+<view class='con-ul'>
+  <text class='con-ul-li'>上海</text>
+  <text class='con-ul-li'>苏州</text>
+  <text class='con-ul-li'>上海嘉定</text>
+  <text class='con-ul-li'>上海</text>
+  <text class='con-ul-li'>苏州</text>
+  <text class='con-ul-li'>上海嘉定</text>
+  <text class='con-ul-li'>上海</text>
+  <text class='con-ul-li'>苏州</text>
+</view> -->
+<view class='hot-search'>
+  <text class='hot-search-titel'>历史搜索</text>
+  <image bindtap='remove' class='hot-search-img' src='https://wx-gsf.oss-cn-hangzhou.aliyuncs.com/home/%E5%9E%83%E5%9C%BE%E6%A1%B6%402x.png'></image>
+</view>
+
+<view class='con-ul-jl'>
+  <text class='con-ul-jl-li' wx:for="{{list}}" wx:key="{{index}}" bindtap='clickkck' data-alpha-beta="{{item}}">{{item}}</text>
+</view>
+
+

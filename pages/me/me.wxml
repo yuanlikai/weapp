@@ -1,0 +1,24 @@
+<!--pages/me/me.wxml-->
+<!-- <i-card full="{{true}}" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+</i-card> -->
+<view class='head'>
+
+  <image wx:if="{{state===0}}"  class='head-img' src='https://wx-gsf.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F.png'></image>
+  <open-data wx:else class='head-img' type="userAvatarUrl"></open-data>
+
+  <button wx:if="{{state===0}}" class='head-name' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">登录 / 注册</button>
+  <open-data wx:else class="head-name" type="userNickName"></open-data>
+  
+  <!-- <view class='head-name'>150****5820</view> -->
+  <!-- <view style='display:none' class='head-name'><text>登录</text> / <text>登录</text></view> -->
+</view>
+<i-cell-group>
+<navigator url="/pages/tickling/tickling" hover-class="navigator-hover" style='float:left;width:100%'>
+  <i-cell title="意见反馈" is-link url="/pages/dashboard/index"></i-cell>
+</navigator>
+  <i-cell bindtap="phone" title="客服电话" value="400-0052-533"></i-cell>
+</i-cell-group>
+
+<i-toast id="toast" />

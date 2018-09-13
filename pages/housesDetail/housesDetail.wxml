@@ -1,0 +1,123 @@
+<view class='swiper-big'>
+  <swiper bindchange="index" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}" indicator-color='{{indicatorColor}}' circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image bindtap='viewImg' data-alpha-beta="{{item}}" src="{{item}}" class="slide-image swiper-img" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <text class='silde'>{{current}} / {{imgUrls.length}}</text>
+</view>
+
+<view class='basicDetail'>
+  <view class='basicDetail-content'>
+    <view class='basicDetail-content-title'>{{detail.hou_names}}</view>
+    <view class='basicDetail-content-det'>均价：
+      <text style='color:#C63030;font-weight: 500'>{{detail.hou_pirce}}元/m²</text>
+    </view>
+    <view class='basicDetail-content-det'>开盘日期：
+      <text style='color:#444'>{{detail.hou_opentime}}</text>
+    </view>
+    <view class='basicDetail-content-det'>装修标准：
+      <text style='color:#444'>{{detail.hou_br==0?'毛坯':''||detail.hou_br==1?'简装':''||detail.hou_br==2?'中等装':''||detail.hou_br==3?'精装':''||detail.hou_br==4?'豪华装':''}}</text>
+    </view>
+    <view class='basicDetail-content-det'>楼盘地址：
+      <text style='color:#444'>{{detail.hou_address}}</text>
+    </view>
+    <navigator url="/pages/housesDetailD/housesDetailD?hou_id={{detail.hou_id}}&type={{type}}" hover-class="navigator-hover">
+      <view class='view-gend'>查看更多信息</view>
+
+    </navigator>
+
+
+    <view class='inform'>
+      <view class='inform-child' bindtap='tanc'>
+        <i-icon type="remind" size="20" />变价通知</view>
+      <view class='inform-child' bindtap='tanc'>
+        <i-icon type="systemprompt" size="20" />开盘通知</view>
+    </view>
+  </view>
+</view>
+
+<view class='phone' bindtap="phone">
+  <view class='phone-child'>咨询热线：{{detail.hou_mobile}}</view>
+  <view class='phone-childa'>
+    <i-icon type="mobilephone_fill" size="18" color="#62AB00" />立即拨打</view>
+</view>
+
+<view class='activity'>
+  <view class='activity-title'>主力户型</view>
+  <scroll-view class="scroll-view_H activity-ul activity-ula" scroll-x style="width: 100%;{{houTypeList<1?'height:100rpx':''}}">
+    <view class='activity-ul-big'>
+
+      <navigator wx:for="{{houTypeList}}" wx:key="{{index}}" url="/pages/housesType/housesType?hou_ses_id={{item.hou_ses_id}}" hover-class="navigator-hover">
+        <view class='activity-li'>
+          <view class='affa-big'>
+            <image class='activity-li-img' src='http://img.gsfzd.com/{{item.hou_ses_pic}}?x-oss-process=image/resize,h_200'></image>
+          </view>
+          <view class='activity-li-name'>{{item.hou_ses_name}}：{{item.hou_size_info}}</view>
+          <view class='activity-li-child'>{{item.hou_ses_area}}m²</view>
+          <view class='activity-li-child' style="float:right;color:#C63030">{{item.hou_ses_price+'元/m²'}}</view>
+        </view>
+      </navigator>
+      <view wx:if="{{houTypeList<1}}" class="offType">暂无户型图</view>
+    </view>
+  </scroll-view>
+</view>
+<view class='activity'>
+  <view class='activity-title'>周边配套</view>
+  <view class='activity-map'>
+  
+<view class="map_container"> 
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+</view> 
+  </view>
+</view>
+
+
+
+<view class='activity'>
+  <view class='activity-title'>为你推荐</view>
+  <view class='activity-ul-xinf'>
+
+    <navigator wx:for="{{recommendList}}" wx:key="{{index}}" url="/pages/housesDetail/housesDetail?hou_id={{item.hou_id}}" hover-class="navigator-hover">
+      <view class='activity-li-xinf'>
+        <image class='activity-ul-xinf-img' src="{{item.hou_pic[0].url}}?x-oss-process=image/resize,h_150"></image>
+        <view class='activity-ul-xinf-name'>{{item.hou_names}}
+          <text class='activity-ul-xinf-state' style="background:{{item.hou_status===0?'#c63031':(item.hou_status===1?'#009C36':'#999')}}">{{item.hou_status===0?'在售':(item.hou_status===1?'待售':'售罄')}}</text>
+        </view>
+        <view class='activity-ul-xinf-detail'>
+          {{item.hou_point}}
+          <!-- <text>高层</text>
+          <text class='xinf-detail-line'></text>
+          <text>嘉定南翔</text>
+          <text class='xinf-detail-line'></text>
+          <text>142-323m平方</text> -->
+        </view>
+        <view class='activity-li-child'>均价：
+          <text class='child-paia'>{{item.hou_pirce}}<text style='font-size:24rpx;font-weight: 400'>元/m²</text></text>
+        </view>
+      </view>
+    </navigator>
+
+  </view>
+
+  <view class="daodia">
+    <i-load-more wx:if="{{loadingSta}}" tip="数据加载中..." loading="{{ true }}" />
+    <i-load-more wx:if="{{!loadingSta}}" tip="数据加载完成" loading="{{ false }}" />
+  </view>
+</view>
+<view style='float:left;width:100%;height:130rpx;'>
+</view>
+<!-- <view class='footer'> -->
+
+<!-- <cover-view class='footer'>
+  <button class='footer-Yy' bindtap='ljyy'>立即预约</button>
+  <button class='footer-Yy' style='margin-right:54rpx;background:rgba(98,171,0,1)' open-type="contact">
+    在线咨询
+  </button>
+  <button class='footer-fx'>
+    收藏
+  </button>
+</cover-view> -->
+<!-- </view> -->

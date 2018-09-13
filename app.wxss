@@ -1,0 +1,46 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.daodia {
+  float: left;
+  background: #fff;
+  width: 704rpx;
+  height: 100rpx;
+  color: #656565;
+  text-align: center;
+  line-height: 70rpx;
+  margin-left: 23rpx;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  padding: 0 0 22rpx 0
+}
+.activity-ul-xinf-name {
+  width: 450rpx;
+}
+.activity-ul-xinf-detail {
+  width: 450rpx;
+}
+.activity-ul-xinf-state {
+  padding: 0 4rpx;
+  border-radius: 4rpx;
+  background: #c63031;
+  color: #fff;
+  font-size: 20rpx;
+}
+
+button::after{
+border: none;
+}
+.activity-ul-xinf-detail{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:  ellipsis
+}
